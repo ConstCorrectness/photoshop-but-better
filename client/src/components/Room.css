@@ -1,0 +1,136 @@
+.room-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.loading, .error-message, .waiting-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.error-text {
+  color: #e74c3c;
+  margin-top: 15px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.error-message h2 {
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.connection-help {
+  margin-top: 20px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.connection-help p {
+  margin-bottom: 10px;
+}
+
+.connection-help ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.connection-help li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.connection-help code {
+  background: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: #333;
+}
+
+.btn-retry,
+.btn-home {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 5px;
+}
+
+.btn-retry {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-retry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-home {
+  background: #95a5a6;
+  color: white;
+}
+
+.btn-home:hover {
+  background: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+.waiting-screen h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.game-header {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-header h2 {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.round-info {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+

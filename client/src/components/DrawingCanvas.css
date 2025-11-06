@@ -1,0 +1,189 @@
+.drawing-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.drawing-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 900px;
+}
+
+.prompt-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.prompt-section h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.prompt-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.drawing-canvas {
+  border: 3px solid #333;
+  border-radius: 10px;
+  cursor: crosshair;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  height: auto;
+}
+
+.drawing-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.color-picker {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.color-picker label {
+  font-weight: 600;
+  color: #333;
+  min-width: 60px;
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.color-btn {
+  width: 40px;
+  height: 40px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.color-btn:hover {
+  transform: scale(1.1);
+}
+
+.color-btn.active {
+  border-color: #333;
+  transform: scale(1.2);
+}
+
+.brush-size {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brush-size label {
+  font-weight: 600;
+  color: #333;
+  min-width: 140px;
+}
+
+.brush-size input[type="range"] {
+  flex: 1;
+  height: 8px;
+  border-radius: 5px;
+  background: #e0e0e0;
+  outline: none;
+}
+
+.brush-size input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+}
+
+.brush-size input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  border: none;
+}
+
+.drawing-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.btn-clear,
+.btn-submit {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-clear {
+  background: #ffc107;
+  color: #333;
+}
+
+.btn-clear:hover {
+  background: #ffb300;
+  transform: translateY(-2px);
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 900px) {
+  .drawing-canvas {
+    width: 100%;
+    height: auto;
+  }
+  
+  .drawing-controls {
+    font-size: 0.9rem;
+  }
+  
+  .color-btn {
+    width: 35px;
+    height: 35px;
+  }
+}
+
