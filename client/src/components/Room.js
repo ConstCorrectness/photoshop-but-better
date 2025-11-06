@@ -8,10 +8,23 @@ import Results from './Results';
 import './Room.css';
 
 // Use the current host with port 3001 for socket connection
+// For production, set REACT_APP_SOCKET_URL environment variable
 const getSocketUrl = () => {
+  // Check for environment variable first (for production)
+  if (process.env.REACT_APP_SOCKET_URL) {
+    return process.env.REACT_APP_SOCKET_URL;
+  }
+  
+  // For local development or when on same domain, use the current host
+  // Use HTTPS protocol if page is served over HTTPS (for secure WebSocket WSS)
+  const protocol = window.location.protocol === 'https:' ? 'https:' : 'http:';
   const host = window.location.hostname;
-  const port = window.location.port === '3000' ? '3001' : window.location.port;
-  const url = `http://${host}:${port}`;
+  // If we're on HTTPS (production), use same host without port (default 443)
+  // If we're on HTTP (local), use port 3001
+  const url = protocol === 'https:' 
+    ? `${protocol}//${host}` 
+    : `${protocol}//${host}:3001`;
+  
   console.log('Connecting to socket server at:', url);
   return url;
 };
