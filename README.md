@@ -211,6 +211,17 @@ To play with friends on the same network:
 
 Feel free to submit issues, fork the repository, and create pull requests for any improvements!
 
+## 🚀 Deployment
+
+This app requires both frontend and backend servers. See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+
+**Quick options:**
+- **Render/Railway/Fly.io** - Deploy full stack (recommended)
+- **GitHub Pages + Backend Service** - Deploy frontend to GitHub Pages, backend separately
+- **Single Service** - Deploy everything to one platform
+
+**Note:** GitHub Pages alone cannot host this app because it requires a Node.js backend for real-time multiplayer via Socket.io.
+
 ## 📄 License
 
 MIT License - feel free to use this project for your own purposes!
